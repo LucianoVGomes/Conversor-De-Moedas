@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <script>
+        function Converter() {
+  var valorElemento = document.getElementById("valor");
+  var valor = valorElemento.value;
+  var valorEmDolarNumerico = parseFloat(valor);
+
+  var valorEmReal = valorEmDolarNumerico * 5.17;
+ // console.log(valorEmReal);
+
+  var elementoValorConvertido = document.getElementById("valorConvertido");
+  var valorConvertido = "O resultado da conversão de $ para R$ É: " + valorEmReal;
+  elementoValorConvertido.innerHTML = valorConvertido;
+
+  var valorElementoEuro = document.getElementById("valor2");
+  var valorEu = valorElementoEuro.value;
+  var valorEmEuroNumerico = parseFloat(valorEu);
+
+  var valorEuroConv = valorEmEuroNumerico * 6.22;
+  //console.log(valorEuParaReal);
+
+  var elementoValorEuroConvertido = document.getElementById("valorEuroConvertido");
+  var valorEuroConvertido = " O resultado da conversão de € para R$ É: " + valorEuroConv ;
+  elementoValorEuroConvertido.innerHTML = valorEuroConvertido;
+}
+
+    </script>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+        <h1 class="page-title">
+          Conversor de moedas 
+        </h1>
+        <p class="page-subtitle">
+          Descubra os valores em dolar e Euro !!!
+        </p>
+        <label for="moeda">Insira o valor de Dolar para Real</label><br>
+        <input type="number" id="valor" size="2" /><br>
+        <label for="moeda2">Insira o valor de Euro para Real</label><br>
+        <input type="number" id="valor2" size="3" /><br>
+        <button type="submit" onclick="Converter()">Converter os valores</button>
+        <h2 id="valorConvertido"></h2>
+        <h3 id="valorEuroConvertido"></h3>
+      </div>
+      <a href="https://alura.com.br/" target="_blank">
+        <img src=https://yt3.ggpht.com/ytc/AKedOLRszi3O39AB5-uw_1jkrxJppwegjToBgIKFIOqiiA=s900-c-k-c0x00ffffff-no-rj alt="" class="Alura-logo">
+       
+  </body>
+</html>
